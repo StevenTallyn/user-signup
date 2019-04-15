@@ -1,0 +1,44 @@
+<!doctype = html>
+<html>
+    <head>
+        <title>
+            User Signup
+        </title>
+        <style>
+            form {
+                background-color: #eee;
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 16px sans-serif;
+                border-radius: 10px;
+            }
+            .error {color:red;}
+        </style>
+    </head>
+    <body>
+        <h1>
+            User Signup
+        </h1>
+        <form method='POST'>
+            Username:
+            <input type="text" name="username" value='{{username}}' />
+            <p class='error'>{{username_error}}</p>
+
+            <br> Password: 
+            <input type="text" name="password" />
+            <p class='error'>{{password_error}}</p>
+
+            <br> Confirm Password:
+            <input type="text" name="password_confirm" />
+            <p class='error'>{{passconf_error}}</p>
+
+            <br> Email (optional):
+            <input type="text" name="email" value='{{email}}' />
+            <p class='error'>{{email_error}}</p>
+
+
+            <br><input type="submit" value="Sign me up!"/>
+        </form>
+    </body>
+</html>
